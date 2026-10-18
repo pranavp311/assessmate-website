@@ -109,6 +109,18 @@ main{font-family:'Geist',ui-sans-serif,system-ui,sans-serif;color:#0A0A0B;backgr
 .vis-caption{font-size:13px;color:#55575E}
 .card{background:rgba(255,255,255,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.9);border-radius:16px;box-shadow:0 0 0 1px rgba(10,10,11,.06),0 12px 32px -12px rgba(10,10,11,.18)}
 
+/* editors */
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.tile.editor{min-height:300px;align-items:center;justify-content:center;text-align:center;gap:16px}
+.editor-note{font-size:15px;color:#55575E}
+
+/* pilot + footer */
+.pilot{padding:40px 0 140px;text-align:center}
+.pilot-inner{display:flex;flex-direction:column;align-items:center;gap:28px}
+.pilot-title{margin:0;font-size:clamp(40px,5.5vw,72px);line-height:1;letter-spacing:-0.05em;font-weight:600}
+.site-footer{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:28px;padding-bottom:40px;border-top:1px solid #EEEEEF;font-size:13px;color:#5F6168}
+.footer-brand{display:inline-flex;align-items:center;gap:8px;color:#0A0A0B;font-weight:500}
+
 /* funded by */
 .backed{padding:72px 24px;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center}
 .backed-label{font-size:15px;color:#55575E}
