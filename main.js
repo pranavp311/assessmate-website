@@ -11,9 +11,9 @@ const CHECK = 'M5 12.5l4.5 4.5L19 7.5';
 
 const CHIPS = [
   { label: "What's missing?", flag: false,
-    reply: "There isn't enough on playing with others yet. Only one session mentions it. Add another observation and I'll draft that part too." },
-  { label: 'Check hand skills', flag: true,
-    reply: 'Hand skills look low too: 11 out of 24, and a fist grip in four of five sessions. Therapy here needs your supervisor to sign off, so I have flagged it for them.' }
+    reply: "There isn't enough on social interaction yet. Only one session mentions it. Add another observation and I'll draft that part too." },
+  { label: 'Check fine motor skills', flag: true,
+    reply: 'Fine motor skills look low too: 11 out of 24, with a palmar-supinate pencil grasp in four of five sessions. Occupational therapy needs your supervisor to sign off, so I have flagged it for them.' }
 ];
 
 let added = false;
@@ -58,7 +58,7 @@ function draftMsg() {
     <div class="a-draft">
       <div class="a-text">Here's a draft from her scores and your notes.</div>
       <div class="draft">
-        <p class="draft-p"><strong>Speaking and vocabulary.</strong> Mei Lin scored 8 out of 20 for vocabulary <span class="num">1</span> and uses two to three word phrases when asking for things <span class="num">2</span>. Speech and language support is recommended.</p>
+        <p class="draft-p"><strong>Expressive language.</strong> Mei Lin scored 8 out of 20 for vocabulary <span class="num">1</span> and uses two to three word phrases when asking for things <span class="num">2</span>. Speech and language therapy is recommended.</p>
         <div class="srcs">
           <div class="srcrow"><span class="num">1</span>${SHEET_ICON}Assessment sheet<b>Vocabulary 8/20</b></div>
           <div class="srcrow"><span class="num">2</span>${NOTE_ICON}Your notes<b>Session 2</b></div>
