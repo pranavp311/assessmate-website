@@ -71,6 +71,12 @@ a{color:#0A0A0B}a:hover{color:#55575E}
 .vis{flex:1;display:flex;align-items:center;justify-content:center}
 .card{background:rgba(255,255,255,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.9);border-radius:16px;box-shadow:0 0 0 1px rgba(10,10,11,.06),0 12px 32px -12px rgba(10,10,11,.18)}
 
+/* funded by */
+.backed{padding:72px 24px;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center}
+.backed-label{font-size:15px;color:#55575E}
+.backed-row{display:flex;align-items:center;gap:20px;text-align:left;font-size:20px;line-height:1.3;font-weight:600;letter-spacing:-0.02em;color:#55575E}
+.backed-row img{height:80px;width:auto}
+
 /* glass world */
 .world{position:relative;margin:12px;border-radius:28px;overflow:hidden;isolation:isolate;padding-bottom:140px}
 .world-bg{position:absolute;inset:-120px;background:#C9DCE4 url(assets/hills.jpg) center/cover no-repeat;filter:blur(70px) saturate(1.2);z-index:-2}
@@ -128,6 +134,9 @@ a{color:#0A0A0B}a:hover{color:#55575E}
 /* phones: full-bleed sections instead of stacked rounded panels; tiles size to content */
 @media (max-width:760px){
 .stage,.world{margin:0;border-radius:0}
+.backed{padding:56px 24px}
+.backed-row{flex-direction:column;gap:14px;text-align:center;font-size:17px}
+.backed-row br{display:none}
 .tile{min-height:0;padding:28px;gap:28px}
 .tile h3{font-size:26px}
 }
