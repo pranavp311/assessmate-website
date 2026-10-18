@@ -1,4 +1,5 @@
 body{margin:0;background:#FFFFFF}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 a{color:#0A0A0B}a:hover{color:#55575E}
 .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
 .cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:0 24px;border-radius:999px;font-size:15px;font-weight:500;text-decoration:none;background:#0A0A0B;color:#FFFFFF;transition:transform .2s,background .2s}
