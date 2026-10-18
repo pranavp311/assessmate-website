@@ -84,6 +84,29 @@ main{font-family:'Geist',ui-sans-serif,system-ui,sans-serif;color:#0A0A0B;backgr
 .tile{background:rgba(255,255,255,.42);backdrop-filter:blur(24px) saturate(170%);-webkit-backdrop-filter:blur(24px) saturate(170%);border:1px solid rgba(255,255,255,.7);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 24px 60px -28px rgba(20,50,30,.28);border-radius:28px;padding:40px;display:flex;flex-direction:column;gap:28px;overflow:hidden;min-height:440px;box-sizing:border-box}
 .tile h3{margin:0;font-size:28px;line-height:1.1;letter-spacing:-0.035em;font-weight:600}
 .vis{flex:1;display:flex;align-items:center;justify-content:center}
+.vis-stack{flex-direction:column;gap:14px}
+.section{padding:140px 0 0}
+.section-title{margin:0 0 48px;font-size:clamp(36px,4.5vw,56px);line-height:1.02;letter-spacing:-0.045em;font-weight:600;text-align:center}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+.cite-demo{width:100%;max-width:300px;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.cite-sentence{align-self:stretch;padding:18px;font-size:14px;line-height:1.65;color:#26272B}
+.hl{background:#0A0A0B;color:#FFFFFF;border-radius:4px;padding:1px 4px}
+.cite-source{width:210px;padding:12px 14px}
+.cite-source-head{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:500;color:#55575E}
+.cite-source-row{margin-top:8px;display:flex;align-items:baseline;justify-content:space-between}
+.cite-label{font-size:13px;color:#55575E}
+.cite-score{font-size:22px;font-weight:600;letter-spacing:-0.03em}
+.cite-unit{font-size:13px;color:#8A8C93;font-weight:500}
+.approve-list{width:100%;max-width:300px;padding:6px}
+.approve-row{display:flex;align-items:center;gap:10px;height:48px;padding:0 12px;font-size:14px;font-weight:500}
+.approve-row+.approve-row{border-top:1px solid rgba(10,10,11,.06)}
+.approve-row>:last-child{margin-left:auto}
+.approve-row.is-pending{color:#8A8C93}
+.check-done{width:24px;height:24px;border-radius:99px;background:#0A0A0B;display:inline-flex;align-items:center;justify-content:center}
+.check-empty{width:24px;height:24px;border-radius:99px;box-shadow:inset 0 0 0 1.5px #D4D4D8}
+.name-chip{height:48px;padding:0 20px;display:inline-flex;align-items:center;font-size:16px;font-weight:500}
+.anon-chip{height:48px;padding:0 20px;border-radius:16px;background:#0A0A0B;color:#FFFFFF;display:inline-flex;align-items:center;gap:8px;font-size:16px;font-weight:500}
+.vis-caption{font-size:13px;color:#55575E}
 .card{background:rgba(255,255,255,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.9);border-radius:16px;box-shadow:0 0 0 1px rgba(10,10,11,.06),0 12px 32px -12px rgba(10,10,11,.18)}
 
 /* funded by */
