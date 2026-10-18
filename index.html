@@ -5,28 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Assessmate · Casenotes, backed by evidence</title>
 <meta name="description" content="An AI helper that drafts early-intervention casenotes from your assessments, right inside Word and Google Docs. Built for Singapore's PDPA.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2L2 21L12 14.5Z' fill='%230A0A0B'/%3E%3Cpath d='M12 2L22 21L12 14.5Z' fill='%235B5E66'/%3E%3Cpath d='M2 21L12 14.5L22 21Z' fill='%23B4B6BC'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://assessmate-website.vercel.app/">
+<meta property="og:title" content="Assessmate · Casenotes, backed by evidence">
+<meta property="og:description" content="An AI helper for early-intervention assessors. It drafts casenotes from your assessments, right inside Word and Google Docs.">
+<meta property="og:image" content="https://assessmate-website.vercel.app/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Casenotes, backed by evidence. The Assessmate homepage.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-<main style="font-family: 'Geist', ui-sans-serif, system-ui, sans-serif; color: #0A0A0B; background: #FFFFFF; -webkit-font-smoothing: antialiased">
+<a class="skip" href="#content">Skip to content</a>
+<div class="topbar" hidden>
+<div class="wrap topbar-inner">
+<a href="#top" class="brand"><img src="assets/logo/mark.svg" alt="" width="22" height="22"><span class="brand-name">Assessmate</span></a>
+<nav aria-label="Sections" class="site-nav"><a class="nav hide-sm" href="#how">How it works</a><a class="nav hide-sm" href="#features">Features</a><a class="nav" href="#about">About</a><a class="cta cta-sm" href="mailto:pranavpappu@u.nus.edu?subject=Assessmate%20demo">Book a demo</a></nav>
+</div>
+</div>
+<main>
 
 <!-- HERO -->
 <section id="top" class="hero">
 <div class="stage">
 <div class="hero-text">
-<header class="wrap" style="display: flex; align-items: center; justify-content: space-between; height: 76px; padding: 0">
-<a href="#top" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #0A0A0B">
-<svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" stroke-linejoin="round" stroke-width=".5"><path d="M12 2L2 21L12 14.5Z" fill="#0A0A0B" stroke="#0A0A0B"></path><path d="M12 2L22 21L12 14.5Z" fill="#5B5E66" stroke="#5B5E66"></path><path d="M2 21L12 14.5L22 21Z" fill="#B4B6BC" stroke="#B4B6BC"></path></svg>
-<span style="font-weight: 600; font-size: 18px; letter-spacing: -0.02em">Assessmate</span>
+<header class="wrap site-header">
+<a href="#top" class="brand">
+<img src="assets/logo/mark-mono.svg" alt="" width="24" height="24">
+<span class="brand-name">Assessmate</span>
 </a>
-<nav aria-label="Main" style="display: flex; align-items: center; gap: 24px"><a class="nav hide-sm" href="#about">About</a><a class="cta cta-sm" href="#pilot">Book a demo</a></nav>
+<nav aria-label="Main" class="site-nav"><a class="nav hide-sm" href="#how">How it works</a><a class="nav hide-sm" href="#features">Features</a><a class="nav" href="#about">About</a><a class="cta cta-sm" href="mailto:pranavpappu@u.nus.edu?subject=Assessmate%20demo">Book a demo</a></nav>
 </header>
-<h1 style="margin: 72px 0 0; font-size: clamp(48px, 7vw, 88px); line-height: 1; letter-spacing: -0.05em; font-weight: 600">Casenotes, backed<br>by evidence.</h1>
-<p style="margin: 22px 0 0; font-size: clamp(17px, 1.7vw, 20px); color: #1A1B1F">An AI helper that drafts casenotes from your assessments,<br>right inside Word and Google Docs.</p>
+<h1 class="hero-title" id="content" tabindex="-1">Casenotes, backed<br>by evidence.</h1>
+<p class="hero-lead">An AI helper for early-intervention assessors. <br>It drafts casenotes from your assessments, right inside Word and Google Docs.</p>
 </div>
 
 <div class="win">
@@ -37,10 +55,10 @@
 
 <!-- ASSESSMATE PANEL -->
 <div class="panel" role="region" aria-label="Assessmate chat">
-<div style="display: flex; align-items: center; gap: 10px; height: 52px; padding: 0 12px; flex: none">
-<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" stroke-linejoin="round" stroke-width=".5"><path d="M12 2L2 21L12 14.5Z" fill="#0A0A0B" stroke="#0A0A0B"></path><path d="M12 2L22 21L12 14.5Z" fill="#5B5E66" stroke="#5B5E66"></path><path d="M2 21L12 14.5L22 21Z" fill="#B4B6BC" stroke="#B4B6BC"></path></svg>
-<span style="font-size: 15px; font-weight: 600; letter-spacing: -0.015em">Assessmate</span>
-<span style="margin-left: auto; display: inline-flex; align-items: center; gap: 6px; height: 26px; padding: 0 10px; border-radius: 999px; background: rgba(10,10,11,.05); font-size: 11.5px; font-weight: 500; color: #3F4046">
+<div class="panel-head">
+<img src="assets/logo/mark.svg" alt="" width="22" height="22">
+<span class="panel-name">Assessmate</span>
+<span class="badge">
 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 018 0v3"></path></svg>Name hidden from AI</span>
 </div>
 
@@ -48,15 +66,15 @@
 <div class="chips"></div>
 
 <div class="composer">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A8C93" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5l-8.6 8.6a5.5 5.5 0 01-7.8-7.8l8.6-8.6a3.7 3.7 0 015.2 5.2l-8.6 8.6a1.8 1.8 0 01-2.6-2.6l7.9-7.9"></path></svg>
-<input type="text" aria-label="Ask Assessmate" placeholder="Ask about Mei Lin's assessment…" style="all: unset; flex: 1; min-width: 0; font-size: 13.5px; color: #0A0A0B">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="icon-faint" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5l-8.6 8.6a5.5 5.5 0 01-7.8-7.8l8.6-8.6a3.7 3.7 0 015.2 5.2l-8.6 8.6a1.8 1.8 0 01-2.6-2.6l7.9-7.9"></path></svg>
+<input type="text" aria-label="Ask Assessmate" placeholder="Ask about Mei Lin's assessment…">
 <button class="send" type="button" aria-label="Send"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></button>
 </div>
 </div>
 </div>
 
 <div class="zoom-cap">
-<div style="font-size: clamp(28px, 3vw, 40px); line-height: 1.08; letter-spacing: -0.04em; font-weight: 600">Ask for a draft.<br>See every source.</div>
+<div class="zoom-cap-title">Ask for a draft.<br>See every source.</div>
 </div>
 </div>
 </section>
@@ -68,20 +86,32 @@
 
 <div class="world">
 <div class="world-bg" aria-hidden="true"></div>
-<!-- TILES -->
-<section style="padding: 140px 0 0">
+<!-- HOW IT WORKS -->
+<section id="how" class="section">
 <div class="wrap">
-<h2 style="margin: 0 0 48px; font-size: clamp(36px, 4.5vw, 56px); line-height: 1.02; letter-spacing: -0.045em; font-weight: 600; text-align: center">You stay in charge.</h2>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px">
+<h2 class="section-title">How it works.</h2>
+<ol class="steps">
+<li><span class="step-n" aria-hidden="true">1</span><h3>Add your assessment.</h3><p>Open the Assessmate panel in your casenote and attach the assessment sheet and your observation notes.</p></li>
+<li><span class="step-n" aria-hidden="true">2</span><h3>Ask for a draft.</h3><p>Assessmate drafts each area of need and cites the score or session behind every sentence.</p></li>
+<li><span class="step-n" aria-hidden="true">3</span><h3>Approve it line by line.</h3><p>Check each line, flag anything for your supervisor, and add what you approve to the casenote.</p></li>
+</ol>
+</div>
+</section>
+
+<!-- TILES -->
+<section class="section">
+<div class="wrap">
+<h2 class="section-title">You stay in charge.</h2>
+<div class="grid-3">
 
 <div class="tile">
 <h3>See where it came from.</h3>
 <div class="vis">
-<div style="width: 100%; max-width: 300px; display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
-<div class="card" style="align-self: stretch; padding: 18px; font-size: 14px; line-height: 1.65; color: #26272B">Mei Lin scored <span style="background: #0A0A0B; color: #FFFFFF; border-radius: 4px; padding: 1px 4px">8 out of 20</span> for vocabulary.</div>
-<div class="card" style="width: 210px; padding: 12px 14px">
-<div style="display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 500; color: #55575E"><span class="src src-sheet" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><path d="M4 10h16M4 15h16M10 4v16"></path></svg></span>Assessment sheet</div>
-<div style="margin-top: 8px; display: flex; align-items: baseline; justify-content: space-between"><span style="font-size: 13px; color: #55575E">Vocabulary</span><span style="font-size: 22px; font-weight: 600; letter-spacing: -0.03em">8<span style="font-size: 13px; color: #8A8C93; font-weight: 500"> / 20</span></span></div>
+<div class="cite-demo">
+<div class="card cite-sentence">Mei Lin scored <span class="hl">8 out of 20</span> for vocabulary.</div>
+<div class="card cite-source">
+<div class="cite-source-head"><span class="src src-sheet" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><path d="M4 10h16M4 15h16M10 4v16"></path></svg></span>Assessment sheet</div>
+<div class="cite-source-row"><span class="cite-label">Vocabulary</span><span class="cite-score">8<span class="cite-unit"> / 20</span></span></div>
 </div>
 </div>
 </div>
@@ -90,27 +120,27 @@
 <div class="tile">
 <h3>You approve every line.</h3>
 <div class="vis">
-<div class="card" style="width: 100%; max-width: 300px; padding: 6px">
-<div style="display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 12px; font-size: 14px; font-weight: 500">Expressive language<span style="margin-left: auto; width: 24px; height: 24px; border-radius: 99px; background: #0A0A0B; display: inline-flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></div>
-<div style="display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 12px; font-size: 14px; font-weight: 500; border-top: 1px solid rgba(10,10,11,.06)">Fine motor skills<span class="tag" data-k="check" style="margin-left: auto">Supervisor check</span></div>
-<div style="display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 12px; font-size: 14px; font-weight: 500; color: #8A8C93; border-top: 1px solid rgba(10,10,11,.06)">Social interaction<span style="margin-left: auto; width: 24px; height: 24px; border-radius: 99px; box-shadow: inset 0 0 0 1.5px #D4D4D8"></span></div>
+<div class="card approve-list">
+<div class="approve-row">Expressive language<span class="check-done"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></div>
+<div class="approve-row">Fine motor skills<span class="tag" data-k="check">Supervisor check</span></div>
+<div class="approve-row is-pending">Social interaction<span class="check-empty"></span></div>
 </div>
 </div>
 </div>
 
 <div class="tile">
 <h3>Names stay private.</h3>
-<div class="vis" style="flex-direction: column; gap: 14px">
-<div class="card" style="height: 48px; padding: 0 20px; display: inline-flex; align-items: center; font-size: 16px; font-weight: 500">Mei Lin Tan</div>
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8A8C93" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"></path></svg>
-<div style="height: 48px; padding: 0 20px; border-radius: 16px; background: #0A0A0B; color: #FFFFFF; display: inline-flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 500"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 018 0v3"></path></svg>Child A</div>
-<div style="font-size: 13px; color: #55575E">What the AI sees</div>
+<div class="vis vis-stack">
+<div class="card name-chip">Mei Lin Tan</div>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="icon-faint" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"></path></svg>
+<div class="anon-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 018 0v3"></path></svg>Child A</div>
+<div class="vis-caption">What the AI sees</div>
 </div>
 </div>
 
 </div>
 <div class="pdpa glass">
-<div class="pdpa-head"><span class="pdpa-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg></span><span>Built for Singapore's PDPA</span></div>
+<div class="pdpa-head"><span class="pdpa-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg></span><span>Built for Singapore's PDPA</span></div>
 <ul class="pdpa-list">
 <li>Names and IDs are removed before the AI sees anything.</li>
 <li>Your case data is never used to train AI models.</li>
@@ -121,19 +151,119 @@
 </section>
 
 <!-- EDITORS -->
-<section id="editors" style="padding: 140px 0 0">
+<section id="editors" class="section">
 <div class="wrap">
-<h2 style="margin: 0 0 48px; font-size: clamp(36px, 4.5vw, 56px); line-height: 1.02; letter-spacing: -0.045em; font-weight: 600; text-align: center">Works where you write.</h2>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px">
-<div class="tile" style="min-height: 300px; align-items: center; justify-content: center; text-align: center; gap: 16px">
-<img src="assets/word-logo.svg" alt="" style="width: 80px; height: 80px">
-<h3>Microsoft Word</h3>
-<span style="font-size: 15px; color: #55575E">On your computer or online</span>
+<h2 class="section-title">Works where you write.</h2>
+<div class="grid-2">
+<div class="tile editor">
+<img src="assets/word-logo.svg" alt="" width="80" height="80">
+<div class="editor-text"><h3>Microsoft Word</h3><span class="editor-note">On your computer or online</span></div>
 </div>
-<div class="tile" style="min-height: 300px; align-items: center; justify-content: center; text-align: center; gap: 16px">
-<img src="assets/gdocs-logo.svg" alt="" style="width: 58px; height: 80px">
-<h3>Google Docs</h3>
-<span style="font-size: 15px; color: #55575E">In your browser</span>
+<div class="tile editor">
+<img src="assets/gdocs-logo.svg" alt="" width="58" height="80">
+<div class="editor-text"><h3>Google Docs</h3><span class="editor-note">In your browser</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FEATURES: a fixed window whose slide follows scroll position on wide screens -->
+<section id="features" class="showcase" aria-labelledby="features-title">
+<div class="showcase-stage">
+<div class="wrap showcase-grid">
+<div class="showcase-copy">
+<h2 id="features-title" class="showcase-title">Everything around<br>the casenote.</h2>
+<ol class="feat-list">
+<li><button type="button" class="feat-tab" data-i="0" aria-current="true"><span class="feat-name">Your centre's template</span><span class="feat-desc">Drafts follow your centre's own casenote headings, order and wording.</span></button></li>
+<li><button type="button" class="feat-tab" data-i="1"><span class="feat-name">Supervisor sign-off</span><span class="feat-desc">Flagged sections go to a queue. Supervisors approve them, and every sign-off is recorded.</span></button></li>
+<li><button type="button" class="feat-tab" data-i="2"><span class="feat-name">Developmental domains</span><span class="feat-desc">Each finding is tagged to the developmental domain it belongs to.</span></button></li>
+<li><button type="button" class="feat-tab" data-i="3"><span class="feat-name">Parent summary</span><span class="feat-desc">A plain-language version of the casenote that families can read.</span></button></li>
+<li><button type="button" class="feat-tab" data-i="4"><span class="feat-name">Progress over time</span><span class="feat-desc">A child's scores compared across reassessments, with the change called out.</span></button></li>
+<li><button type="button" class="feat-tab" data-i="5"><span class="feat-name">Data you control</span><span class="feat-desc">Delete a case in one step, clear data after export, and run on-site if your centre can't use cloud AI.</span></button></li>
+</ol>
+</div>
+<div class="feat-window">
+<article class="feat-slide is-on" data-i="0" aria-label="Your centre's template">
+<div class="feat-caption"><h3>Your centre's template</h3><p>Drafts follow your centre's own casenote headings, order and wording.</p></div>
+<div class="feat-ui">
+<div class="card ui-card">
+<div class="ui-head"><span class="ui-title">Template</span><span class="tag">Centre casenote v3</span></div>
+<ul class="ui-list">
+<li>Background<span class="check-done"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></li>
+<li>Assessment summary<span class="check-done"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></li>
+<li>Areas of need<span class="check-done"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></li>
+<li>Recommendations<span class="check-done"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></li>
+<li class="is-pending">Next review<span class="check-empty"></span></li>
+</ul>
+<p class="ui-note">Matched to your centre's headings and wording.</p>
+</div>
+</div>
+</article>
+<article class="feat-slide" data-i="1" aria-label="Supervisor sign-off">
+<div class="feat-caption"><h3>Supervisor sign-off</h3><p>Flagged sections go to a queue. Supervisors approve them, and every sign-off is recorded.</p></div>
+<div class="feat-ui">
+<div class="card ui-card">
+<div class="ui-head"><span class="ui-title">Waiting for your sign-off</span><span class="ui-count">1</span></div>
+<div class="ui-queue">
+<div class="ui-q"><div class="ui-q-text"><span class="ui-q-name">Mei Lin T.</span><span class="ui-q-sub">Fine motor skills</span></div><span class="tag" data-k="check">Supervisor check</span></div>
+<div class="ui-q-actions"><span class="ui-btn">Approve</span><span class="ui-btn ui-btn-ghost">Send back</span></div>
+<div class="ui-q"><div class="ui-q-text"><span class="ui-q-name">Ethan K.</span><span class="ui-q-sub">Social interaction</span></div><span class="tag" data-k="done">Approved</span></div>
+<p class="ui-note">Approved by J. Koh, today at 2:14 pm.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="feat-slide" data-i="2" aria-label="Developmental domains">
+<div class="feat-caption"><h3>Developmental domains</h3><p>Each finding is tagged to the developmental domain it belongs to.</p></div>
+<div class="feat-ui">
+<div class="card ui-card">
+<div class="ui-head"><span class="ui-title">Areas of need</span></div>
+<ul class="ui-findings">
+<li><p>Uses two to three word phrases when asking for things.</p><span class="tag">Communication</span></li>
+<li><p>Holds a crayon in a fisted grasp, not yet a tripod grasp.</p><span class="tag">Fine motor</span></li>
+<li><p>Joins circle time but rarely starts play with peers.</p><span class="tag">Social-emotional</span></li>
+</ul>
+</div>
+</div>
+</article>
+<article class="feat-slide" data-i="3" aria-label="Parent summary">
+<div class="feat-caption"><h3>Parent summary</h3><p>A plain-language version of the casenote that families can read.</p></div>
+<div class="feat-ui">
+<div class="ui-pair">
+<div class="card ui-card ui-quiet"><span class="ui-title">Casenote</span><p>Mei Lin scored 8 out of 20 for vocabulary and presents with expressive language delay. Speech and language therapy is recommended.</p></div>
+<svg class="ui-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"></path></svg>
+<div class="card ui-card"><span class="ui-title">For Mei Lin's parents</span><p>Mei Lin is still learning the words she needs to ask for things. Speech therapy will give her more ways to tell you what she wants.</p></div>
+</div>
+</div>
+</article>
+<article class="feat-slide" data-i="4" aria-label="Progress over time">
+<div class="feat-caption"><h3>Progress over time</h3><p>A child's scores compared across reassessments, with the change called out.</p></div>
+<div class="feat-ui">
+<div class="card ui-card">
+<div class="ui-head"><span class="ui-title">Vocabulary, out of 20</span></div>
+<div class="ui-hero"><span class="ui-hero-n">+6</span><span class="ui-hero-l">since March</span></div>
+<div class="ui-chart" role="img" aria-label="Vocabulary scores: March 8, June 11, September 14, out of 20">
+<div class="ui-axis" aria-hidden="true"><span>20</span><span>10</span><span>0</span></div>
+<div class="ui-plot" aria-hidden="true">
+<div class="ui-bar" style="--v:8" title="March: 8 out of 20"><span class="ui-bar-l">Mar</span></div>
+<div class="ui-bar" style="--v:11" title="June: 11 out of 20"><span class="ui-bar-l">Jun</span></div>
+<div class="ui-bar is-latest" style="--v:14" title="September: 14 out of 20"><span class="ui-bar-v">14</span><span class="ui-bar-l">Sep</span></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="feat-slide" data-i="5" aria-label="Data you control">
+<div class="feat-caption"><h3>Data you control</h3><p>Delete a case in one step, clear data after export, and run on-site if your centre can't use cloud AI.</p></div>
+<div class="feat-ui">
+<div class="card ui-card">
+<div class="ui-head"><span class="ui-title">Case data</span></div>
+<div class="ui-setting"><span>Clear case data after export</span><span class="ui-switch is-on"><span class="sr">On</span></span></div>
+<div class="ui-setting"><span>Where the AI runs</span><span class="ui-seg"><span>Cloud</span><span class="is-on">On-site</span></span></div>
+<div class="ui-setting"><span>Remove everything for this case</span><span class="ui-btn ui-btn-danger">Delete case</span></div>
+</div>
+</div>
+</article>
 </div>
 </div>
 </div>
@@ -170,17 +300,31 @@
 </div>
 </section>
 
-<!-- PILOT -->
-<section id="pilot" style="padding: 40px 0 140px; text-align: center">
-<div class="wrap" style="display: flex; flex-direction: column; align-items: center; gap: 28px">
-<h2 style="margin: 0; font-size: clamp(40px, 5.5vw, 72px); line-height: 1; letter-spacing: -0.05em; font-weight: 600">Try it on one of your cases.</h2>
-<a class="cta" href="mailto:pranavpappu@u.nus.edu?subject=Assessmate%20demo">Book a demo</a>
+<!-- FAQ -->
+<section id="faq" class="faq">
+<div class="wrap faq-inner">
+<h2 class="section-title">Questions.</h2>
+<details class="qa"><summary>Does Assessmate write the casenote for me?</summary><div class="qa-body"><p>It writes a draft. You read every line, change what you need, and only what you approve goes into the casenote.</p></div></details>
+<details class="qa"><summary>How do I know a sentence is right?</summary><div class="qa-body"><p>Every sentence links to the score or session note it came from, so you can check it at a glance. Anything that needs clinical sign-off is flagged for your supervisor.</p></div></details>
+<details class="qa"><summary>What does the AI see?</summary><div class="qa-body"><p>Names and IDs are removed before the AI sees anything. It works with “Child A”, not the child's name.</p></div></details>
+<details class="qa"><summary>Is our case data used to train AI models?</summary><div class="qa-body"><p>No. Your case data is never used to train AI models.</p></div></details>
+<details class="qa"><summary>Can we use it on real records?</summary><div class="qa-body"><p>Only after your Data Protection Officer signs off. Until then, try it on sample cases.</p></div></details>
+<details class="qa"><summary>Which editors does it work in?</summary><div class="qa-body"><p>Microsoft Word, on your computer or online, and Google Docs in your browser.</p></div></details>
 </div>
 </section>
 
-<footer class="wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 28px; padding-bottom: 40px; border-top: 1px solid #EEEEEF; font-size: 13px; color: #5F6168">
-<span style="display: inline-flex; align-items: center; gap: 8px; color: #0A0A0B; font-weight: 500"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" stroke-linejoin="round" stroke-width=".5"><path d="M12 2L2 21L12 14.5Z" fill="#0A0A0B" stroke="#0A0A0B"></path><path d="M12 2L22 21L12 14.5Z" fill="#5B5E66" stroke="#5B5E66"></path><path d="M2 21L12 14.5L22 21Z" fill="#B4B6BC" stroke="#B4B6BC"></path></svg>Assessmate</span>
-<span>Singapore</span>
+<!-- PILOT -->
+<section id="pilot" class="pilot">
+<div class="wrap pilot-inner">
+<h2 class="pilot-title">Try it on one of your cases.</h2>
+<a class="cta" href="mailto:pranavpappu@u.nus.edu?subject=Assessmate%20demo">Book a demo</a>
+<p class="pilot-note">Or write to <a href="mailto:pranavpappu@u.nus.edu?subject=Assessmate%20demo">pranavpappu@u.nus.edu</a></p>
+</div>
+</section>
+
+<footer class="wrap site-footer">
+<span class="footer-brand"><img src="assets/logo/mark.svg" alt="" width="18" height="18">Assessmate</span>
+<nav aria-label="Footer" class="footer-links"><a href="#how">How it works</a><a href="#features">Features</a><a href="#faq">FAQ</a><a href="mailto:pranavpappu@u.nus.edu">pranavpappu@u.nus.edu</a><span>Singapore</span></nav>
 </footer>
 
 </main>
