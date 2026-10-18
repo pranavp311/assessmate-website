@@ -1,3 +1,22 @@
+// Show the compact top bar once the hero's own header has faded or scrolled away.
+// On wide screens the hero header stays in the sticky stage while it fades, so this
+// goes by scroll distance rather than visibility.
+const topbar = document.querySelector('.topbar');
+if (topbar) {
+  topbar.hidden = false;
+  let ticking = false;
+  const update = () => {
+    const on = window.scrollY > 320;
+    topbar.classList.toggle('is-on', on);
+    topbar.inert = !on;
+    ticking = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }, { passive: true });
+  update();
+}
+
 // Demo chat in the hero panel. Static content; nothing is sent anywhere.
 const chat = document.querySelector('.chat');
 const chipsEl = document.querySelector('.chips');
