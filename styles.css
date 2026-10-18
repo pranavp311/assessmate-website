@@ -53,7 +53,7 @@ section[id]{scroll-margin-top:60px}
 .hero-text{animation:fadeUp linear both;animation-timeline:--hero;animation-range:contain 0% contain 25%}
 .win{animation:zoom linear both;animation-timeline:--hero;animation-range:contain 0% contain 100%}
 .dim{animation:dimIn linear both;animation-timeline:--hero;animation-range:contain 35% contain 70%}
-.zoom-cap{animation:capIn linear both;animation-timeline:--hero;animation-range:contain 70% contain 88%}
+.zoom-cap{animation:capIn linear both;animation-timeline:--hero;animation-range:contain 50% contain 70%}
 }
 }
 @keyframes fadeUp{to{opacity:0;transform:translateY(-48px)}}
