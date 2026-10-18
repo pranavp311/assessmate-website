@@ -17,8 +17,8 @@ body{margin:0;background:var(--surface)}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 a{color:var(--ink)}
 /* one focus ring for every control */
-a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--ink);outline-offset:2px;border-radius:var(--r-sm)}
-.cta:focus-visible,.chip-btn:focus-visible{border-radius:var(--r-pill)}a:hover{color:var(--muted)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+a:hover{color:var(--muted)}
 main{font-family:'Geist',ui-sans-serif,system-ui,sans-serif;color:var(--ink);background:var(--surface);-webkit-font-smoothing:antialiased}
 .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
 
