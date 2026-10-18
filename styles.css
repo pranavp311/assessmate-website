@@ -15,7 +15,10 @@
 }
 body{margin:0;background:var(--surface)}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
-a{color:var(--ink)}a:hover{color:var(--muted)}
+a{color:var(--ink)}
+/* one focus ring for every control */
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--ink);outline-offset:2px;border-radius:var(--r-sm)}
+.cta:focus-visible,.chip-btn:focus-visible{border-radius:var(--r-pill)}a:hover{color:var(--muted)}
 main{font-family:'Geist',ui-sans-serif,system-ui,sans-serif;color:var(--ink);background:var(--surface);-webkit-font-smoothing:antialiased}
 .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
 
@@ -79,7 +82,6 @@ main{font-family:'Geist',ui-sans-serif,system-ui,sans-serif;color:var(--ink);bac
 .add{all:unset;box-sizing:border-box;cursor:pointer;margin-top:12px;width:100%;height:40px;border-radius:var(--r-md);background:var(--ink);color:var(--on-ink);font-size:14px;font-weight:500;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .2s,transform .15s}
 .add:hover{background:var(--ink-2)}.add:active{transform:scale(.98)}
 .add[data-done="true"]{background:var(--success-bg);color:var(--success-fg);cursor:default;transform:none}
-.add:focus-visible,.chip-btn:focus-visible,.send:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 .flag{width:20px;height:20px;border-radius:var(--r-pill);background:var(--warning-bg);color:var(--warning-fg);font-size:12px;font-weight:600;display:inline-flex;align-items:center;justify-content:center;flex:none;margin-top:1px}
 .typing{display:inline-flex;gap:4px;padding:10px 0}
 .typing span{width:6px;height:6px;border-radius:var(--r-pill);background:var(--faint);animation:dot 1s infinite ease-in-out}
