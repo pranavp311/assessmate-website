@@ -1,4 +1,10 @@
 :root{
+--shadow-card:0 0 0 1px var(--hair),0 12px 32px -12px rgba(10,10,11,.18);
+--shadow-panel:inset 0 1px 0 rgba(255,255,255,.95),0 1px 2px var(--wash),0 16px 40px -10px rgba(10,10,11,.18),0 48px 96px -32px rgba(10,10,11,.22);
+--shadow-window:0 0 0 1px var(--hair),0 30px 80px -20px rgba(10,10,11,.25),0 60px 160px -60px rgba(10,10,11,.3);
+--shadow-glass:inset 0 1px 0 rgba(255,255,255,.9),0 24px 60px -28px rgba(20,50,30,.28);
+--ring:0 0 0 2px var(--ink);
+--blur-glass:blur(24px) saturate(170%);--blur-card:blur(16px);
 --r-sm:6px;--r-md:12px;--r-lg:16px;--r-xl:28px;--r-pill:999px;
 --ink:#0A0A0B;--ink-2:#26272B;--muted:#55575E;--subtle:#6A6D74;--faint:#8A8C93;
 --on-ink:#FFFFFF;--surface:#FFFFFF;--surface-2:#F5F5F6;
@@ -27,7 +33,7 @@ main{font-family:'Geist',ui-sans-serif,system-ui,sans-serif;color:var(--ink);bac
 .hero{position:relative;height:2000px;view-timeline-name:--hero;view-timeline-axis:block}
 .stage{position:sticky;top:12px;margin:12px;height:min(900px,calc(100vh - 24px));border-radius:var(--r-xl);overflow:hidden;background:var(--sky) url(assets/hills.jpg) center 78%/cover no-repeat}
 .hero-text{position:relative;z-index:1;text-align:center;padding:0 24px}
-.win{position:absolute;z-index:2;left:0;right:0;top:540px;margin:0 auto;width:min(1200px,calc(100% - 48px));aspect-ratio:1470/801;border-radius:var(--r-lg);background:var(--surface);box-shadow:0 0 0 1px var(--hair),0 30px 80px -20px rgba(10,10,11,.25),0 60px 160px -60px rgba(10,10,11,.3);transform-origin:100% 0}
+.win{position:absolute;z-index:2;left:0;right:0;top:540px;margin:0 auto;width:min(1200px,calc(100% - 48px));aspect-ratio:1470/801;border-radius:var(--r-lg);background:var(--surface);box-shadow:var(--shadow-window);transform-origin:100% 0}
 .shot{position:absolute;inset:0;border-radius:var(--r-lg);overflow:hidden;background:var(--surface-2)}
 .shot img{width:100%;height:100%;object-fit:cover;object-position:top left;display:block}
 .dim{position:absolute;inset:0;border-radius:var(--r-lg);background:var(--surface-2);opacity:0;pointer-events:none}
@@ -53,7 +59,7 @@ main{font-family:'Geist',ui-sans-serif,system-ui,sans-serif;color:var(--ink);bac
 }
 
 /* panel */
-.panel{position:absolute;top:84px;right:-32px;width:384px;height:520px;display:flex;flex-direction:column;box-sizing:border-box;border-radius:var(--r-xl);background:linear-gradient(160deg,rgba(255,255,255,.74),rgba(255,255,255,.52));backdrop-filter:blur(30px) saturate(190%);-webkit-backdrop-filter:blur(30px) saturate(190%);border:1px solid rgba(255,255,255,.75);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 1px 2px var(--wash),0 16px 40px -10px rgba(10,10,11,.18),0 48px 96px -32px rgba(10,10,11,.22);padding:6px;font-size:13px;color:var(--ink);text-align:left;z-index:1}
+.panel{position:absolute;top:84px;right:-32px;width:384px;height:520px;display:flex;flex-direction:column;box-sizing:border-box;border-radius:var(--r-xl);background:linear-gradient(160deg,rgba(255,255,255,.74),rgba(255,255,255,.52));backdrop-filter:var(--blur-glass);-webkit-backdrop-filter:var(--blur-glass);border:1px solid rgba(255,255,255,.75);box-shadow:var(--shadow-panel);padding:6px;font-size:13px;color:var(--ink);text-align:left;z-index:1}
 .panel-head{display:flex;align-items:center;gap:10px;height:52px;padding:0 12px;flex:none}
 .panel-name{font-size:15px;font-weight:600;letter-spacing:-0.015em}
 .badge{margin-left:auto;display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px;border-radius:var(--r-pill);background:var(--wash);font-size:11.5px;font-weight:500;color:var(--ink-2)}
@@ -66,7 +72,7 @@ main{font-family:'Geist',ui-sans-serif,system-ui,sans-serif;color:var(--ink);bac
 .u-bubble{background:var(--ink);color:var(--on-ink);border-radius:var(--r-lg) var(--r-lg) var(--r-sm) var(--r-lg);padding:9px 14px;font-size:13.5px;line-height:1.45;max-width:85%}
 .file{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 10px 0 8px;border-radius:var(--r-md);background:rgba(255,255,255,.8);border:1px solid var(--hair);font-size:12px;font-weight:500;color:var(--ink-2)}
 .a-text{font-size:13.5px;line-height:1.55;color:var(--ink-2)}
-.draft{background:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.95);box-shadow:0 0 0 1px rgba(10,10,11,.04),0 10px 28px -12px rgba(10,10,11,.18);border-radius:var(--r-lg);padding:14px}
+.draft{background:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.95);box-shadow:var(--shadow-card);border-radius:var(--r-lg);padding:14px}
 .num{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:var(--r-sm);background:var(--ink);color:var(--on-ink);font-size:10px;font-weight:600;vertical-align:1px;flex:none}
 .srcrow{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}
 .add{all:unset;box-sizing:border-box;cursor:pointer;margin-top:12px;width:100%;height:40px;border-radius:var(--r-md);background:var(--ink);color:var(--on-ink);font-size:13.5px;font-weight:500;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .2s,transform .15s}
@@ -80,7 +86,7 @@ main{font-family:'Geist',ui-sans-serif,system-ui,sans-serif;color:var(--ink);bac
 @keyframes dot{0%,80%,100%{opacity:.3;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}
 .chip-btn{all:unset;box-sizing:border-box;cursor:pointer;height:30px;padding:0 12px;border-radius:var(--r-pill);background:rgba(255,255,255,.7);border:1px solid rgba(10,10,11,.08);font-size:12.5px;font-weight:500;color:var(--ink-2);transition:background .15s}
 .chip-btn:hover{background:var(--surface)}
-.composer{flex:none;margin:0 4px 4px;display:flex;align-items:center;gap:10px;height:50px;padding:0 6px 0 14px;border-radius:var(--r-lg);background:rgba(255,255,255,.88);border:1px solid rgba(10,10,11,.07);box-shadow:0 4px 14px -6px rgba(10,10,11,.12)}
+.composer{flex:none;margin:0 4px 4px;display:flex;align-items:center;gap:10px;height:50px;padding:0 6px 0 14px;border-radius:var(--r-lg);background:rgba(255,255,255,.88);border:1px solid rgba(10,10,11,.07);box-shadow:var(--shadow-card)}
 .send{all:unset;cursor:pointer;width:36px;height:36px;border-radius:var(--r-md);background:var(--ink);color:var(--on-ink);display:inline-flex;align-items:center;justify-content:center;flex:none}
 /* source icons stay neutral: green and amber only ever mean a state */
 .src{width:16px;height:16px;display:inline-flex;align-items:center;justify-content:center;flex:none;color:var(--muted)}
@@ -88,7 +94,7 @@ main{font-family:'Geist',ui-sans-serif,system-ui,sans-serif;color:var(--ink);bac
 .tag[data-k="check"]{background:var(--warning-bg);color:var(--warning-fg)}
 
 /* tiles */
-.tile{background:rgba(255,255,255,.42);backdrop-filter:blur(24px) saturate(170%);-webkit-backdrop-filter:blur(24px) saturate(170%);border:1px solid rgba(255,255,255,.7);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 24px 60px -28px rgba(20,50,30,.28);border-radius:var(--r-xl);padding:40px;display:flex;flex-direction:column;gap:28px;overflow:hidden;min-height:440px;box-sizing:border-box}
+.tile{background:rgba(255,255,255,.42);backdrop-filter:var(--blur-glass);-webkit-backdrop-filter:var(--blur-glass);border:1px solid rgba(255,255,255,.7);box-shadow:var(--shadow-glass);border-radius:var(--r-xl);padding:40px;display:flex;flex-direction:column;gap:28px;overflow:hidden;min-height:440px;box-sizing:border-box}
 .tile h3{margin:0;font-size:28px;line-height:1.1;letter-spacing:-0.035em;font-weight:600}
 .vis{flex:1;display:flex;align-items:center;justify-content:center}
 .vis-stack{flex-direction:column;gap:14px}
@@ -114,7 +120,7 @@ main{font-family:'Geist',ui-sans-serif,system-ui,sans-serif;color:var(--ink);bac
 .name-chip{height:48px;padding:0 20px;display:inline-flex;align-items:center;font-size:16px;font-weight:500}
 .anon-chip{height:48px;padding:0 20px;border-radius:var(--r-lg);background:var(--ink);color:var(--on-ink);display:inline-flex;align-items:center;gap:8px;font-size:16px;font-weight:500}
 .vis-caption{font-size:13px;color:var(--muted)}
-.card{background:rgba(255,255,255,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.9);border-radius:var(--r-lg);box-shadow:0 0 0 1px var(--hair),0 12px 32px -12px rgba(10,10,11,.18)}
+.card{background:rgba(255,255,255,.82);backdrop-filter:var(--blur-card);-webkit-backdrop-filter:var(--blur-card);border:1px solid rgba(255,255,255,.9);border-radius:var(--r-lg);box-shadow:var(--shadow-card)}
 
 /* editors */
 .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
@@ -138,7 +144,7 @@ main{font-family:'Geist',ui-sans-serif,system-ui,sans-serif;color:var(--ink);bac
 .world{position:relative;margin:12px;border-radius:var(--r-xl);overflow:hidden;isolation:isolate;padding-bottom:140px}
 .world-bg{position:absolute;inset:-120px;background:var(--sky-mist) url(assets/hills.jpg) center/cover no-repeat;filter:blur(70px) saturate(1.2);z-index:-2}
 .world::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.28) 45%,rgba(255,255,255,.5) 100%);z-index:-1}
-.glass{background:rgba(255,255,255,.45);backdrop-filter:blur(26px) saturate(170%);-webkit-backdrop-filter:blur(26px) saturate(170%);border:1px solid rgba(255,255,255,.72);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 30px 70px -30px rgba(20,50,30,.3)}
+.glass{background:rgba(255,255,255,.45);backdrop-filter:var(--blur-glass);-webkit-backdrop-filter:var(--blur-glass);border:1px solid rgba(255,255,255,.72);box-shadow:var(--shadow-glass)}
 .nav{color:var(--ink);text-decoration:none;font-size:15px;font-weight:500}.nav:hover{color:var(--muted)}
 @media (max-width:999px){.panel{right:auto !important}}
 
@@ -185,7 +191,7 @@ main{font-family:'Geist',ui-sans-serif,system-ui,sans-serif;color:var(--ink);bac
 @media (min-width:1000px){.hero{height:auto}.stage{position:relative;top:0;height:auto;padding-bottom:120px}.win{position:relative;top:auto;margin-top:56px}.zoom-cap{display:none}}
 }
 @media (min-width:1000px) and (prefers-reduced-motion:reduce){.hero{height:auto}.stage{position:relative;top:0;height:auto;padding-bottom:120px}.win{position:relative;top:auto;margin-top:56px}.zoom-cap{display:none}}
-.composer:focus-within{box-shadow:0 0 0 2px var(--ink)}
+.composer:focus-within{box-shadow:var(--ring)}
 .composer input::placeholder{color:var(--subtle)}
 
 /* phones: full-bleed sections instead of stacked rounded panels; tiles size to content */
