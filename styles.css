@@ -212,3 +212,7 @@ section[id]{scroll-margin-top:60px}
 .tile{min-height:0;padding:28px;gap:28px}
 .tile h3{font-size:28px}
 }
+
+/* phones keep About in the nav: tighter gap, and the name drops on the narrowest screens */
+@media (max-width:760px){.site-nav{gap:16px}}
+@media (max-width:400px){.brand-name{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
