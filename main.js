@@ -63,11 +63,17 @@ function userMsg(text, files) {
   push(box);
 }
 
-function textMsg(text, flag) {
+function textMsg(text, flag, link) {
   const row = el('<div class="a-row"></div>');
   if (flag) row.appendChild(el('<span class="flag" aria-hidden="true">!</span>'));
   const t = el('<div class="a-text"></div>');
   t.textContent = text;
+  if (link) {
+    const a = document.createElement('a');
+    a.href = link.href;
+    a.textContent = link.label;
+    t.append(' ', a);
+  }
   row.appendChild(t);
   push(row);
 }
@@ -98,11 +104,11 @@ function draftMsg() {
 }
 
 // Each reply owns its typing indicator and timeout, so overlapping questions both resolve.
-function reply(text, flag) {
+function reply(text, flag, link) {
   const typing = push(el('<div class="typing" role="status" aria-label="Assessmate is writing"><span></span><span></span><span></span></div>'));
   setTimeout(() => {
     typing.remove();
-    textMsg(text, flag);
+    textMsg(text, flag, link);
   }, 1100);
 }
 
@@ -127,7 +133,8 @@ function send() {
   if (!text) return;
   input.value = '';
   userMsg(text);
-  reply('This is a demo, so I can only answer the suggested questions. Book a demo to try Assessmate on your own cases.', false);
+  reply('This is a demo, so I can only answer the suggested questions.', false,
+    { href: 'mailto:pranavpappu@u.nus.edu?subject=Assessmate%20demo', label: 'Book a demo to try it on your own cases.' });
 }
 
 sendBtn.addEventListener('click', send);

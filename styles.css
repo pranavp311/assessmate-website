@@ -219,3 +219,4 @@ section[id]{scroll-margin-top:60px}
 @media (max-width:760px){.hero-lead br{display:none}}
 .pilot-note{margin:-8px 0 0;font-size:15px;color:var(--muted)}
 .pilot-note a{color:var(--ink);text-underline-offset:3px}
+.a-text a{color:var(--ink);font-weight:500;text-underline-offset:3px}
