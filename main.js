@@ -13,7 +13,7 @@ const CHIPS = [
   { label: "What's missing?", flag: false,
     reply: "There isn't enough on social interaction yet. Only one session mentions it. Add another observation and I'll draft that part too." },
   { label: 'Check fine motor skills', flag: true,
-    reply: 'Fine motor skills look low too: 11 out of 24, with no tripod grasp observed in four of five sessions. Occupational therapy needs your supervisor to sign off, so I have flagged it for them.' }
+    reply: 'Poor fine motor skills: 1 out of 5 with quadrupod grasp. Occupational therapy needs your supervisor to sign off, so I have flagged it for them.' }
 ];
 
 let added = false;
