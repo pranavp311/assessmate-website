@@ -143,3 +143,53 @@ input.addEventListener('keydown', (e) => { if (e.key === 'Enter') send(); });
 userMsg('Draft the areas of need for Mei Lin.', true);
 draftMsg();
 renderChips();
+
+// Feature showcase: on wide screens the stage sticks while the section scrolls past,
+// and the slide shown follows how far through the section the reader is.
+const showcase = document.querySelector('.showcase');
+if (showcase) {
+  const tabs = [...showcase.querySelectorAll('.feat-tab')];
+  const slides = [...showcase.querySelectorAll('.feat-slide')];
+  const stage = showcase.querySelector('.showcase-stage');
+  const wide = window.matchMedia('(min-width: 1000px)');
+  let current = -1;
+
+  const setActive = (i) => {
+    if (i === current) return;
+    current = i;
+    tabs.forEach((t, k) => {
+      if (k === i) t.setAttribute('aria-current', 'true');
+      else t.removeAttribute('aria-current');
+    });
+    slides.forEach((s, k) => {
+      s.classList.toggle('is-on', k === i);
+      s.inert = k !== i;
+    });
+  };
+
+  // How far the reader is through the sticky run, 0 to 1.
+  const progress = () => {
+    const run = showcase.offsetHeight - stage.offsetHeight;
+    const top = -showcase.getBoundingClientRect().top;
+    return Math.min(Math.max(top / run, 0), 0.9999);
+  };
+
+  let queued = false;
+  const update = () => {
+    queued = false;
+    if (!wide.matches) return;
+    setActive(Math.floor(progress() * slides.length));
+  };
+
+  // On phones every slide is shown in turn, so none is hidden.
+  const reset = () => {
+    if (wide.matches) { current = -1; update(); return; }
+    slides.forEach((s) => { s.classList.add('is-on'); s.inert = false; });
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!queued) { queued = true; requestAnimationFrame(update); }
+  }, { passive: true });
+  wide.addEventListener('change', reset);
+  reset();
+}
