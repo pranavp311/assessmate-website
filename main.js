@@ -228,3 +228,34 @@ if (showcase) {
   wide.addEventListener('change', reset);
   reset();
 }
+
+// FAQ: animate each answer open and closed instead of snapping.
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+document.querySelectorAll('.qa').forEach((item) => {
+  const summary = item.querySelector('summary');
+  const body = item.querySelector('.qa-body');
+  let anim = null;
+  let closing = false;
+  summary.addEventListener('click', (e) => {
+    if (reduceMotion.matches || !body.animate) return;
+    e.preventDefault();
+    // A closed <details> can still report its content's height, so start closed answers at 0.
+    const from = item.open ? body.getBoundingClientRect().height : 0;
+    if (anim) anim.cancel();
+    if (!item.open || closing) {
+      closing = false;
+      item.classList.remove('is-closing');
+      item.open = true;
+      const to = body.scrollHeight;
+      anim = body.animate([{ height: from + 'px', opacity: from ? 1 : 0 }, { height: to + 'px', opacity: 1 }],
+        { duration: 300, easing: 'cubic-bezier(.25, .8, .25, 1)' });
+    } else {
+      closing = true;
+      item.classList.add('is-closing');
+      anim = body.animate([{ height: from + 'px', opacity: 1 }, { height: '0px', opacity: 0 }],
+        { duration: 220, easing: 'cubic-bezier(.4, 0, 1, 1)', fill: 'forwards' });
+      const done = anim;
+      done.onfinish = () => { item.open = false; closing = false; item.classList.remove('is-closing'); done.cancel(); };
+    }
+  });
+});
