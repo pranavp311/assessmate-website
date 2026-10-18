@@ -166,20 +166,104 @@
 </div>
 </section>
 
-<!-- NEXT -->
-<section id="next" class="section">
-<div class="wrap">
-<h2 class="section-title">What we're building next.</h2>
-<div class="next glass">
-<ul class="next-list">
-<li><h3>Your centre's template</h3><p>Drafts that follow your centre's own casenote headings and wording.</p></li>
-<li><h3>Supervisor sign-off</h3><p>A queue where supervisors review flagged sections and approve them, with a record of who signed off.</p></li>
-<li><h3>Developmental domains</h3><p>Each finding tagged to the developmental domain it belongs to, so nothing is filed in the wrong place.</p></li>
-<li><h3>Parent summary</h3><p>A plain-language version of the casenote that families can read.</p></li>
-<li><h3>Progress over time</h3><p>A child's scores compared across reassessments, with the change called out.</p></li>
-<li><h3>Data you control</h3><p>Delete a case in one step, clear data automatically after export, and run on-site for centres that can't use cloud AI.</p></li>
+<!-- FEATURES: a fixed window whose slide follows scroll position on wide screens -->
+<section id="features" class="showcase" aria-labelledby="features-title">
+<div class="showcase-stage">
+<div class="wrap showcase-grid">
+<div class="showcase-copy">
+<h2 id="features-title" class="showcase-title">Everything around<br>the casenote.</h2>
+<ol class="feat-list">
+<li><button type="button" class="feat-tab" data-i="0" aria-current="true"><span class="feat-name">Your centre's template</span><span class="feat-desc">Drafts follow your centre's own casenote headings, order and wording.</span></button></li>
+<li><button type="button" class="feat-tab" data-i="1"><span class="feat-name">Supervisor sign-off</span><span class="feat-desc">Flagged sections go to a queue. Supervisors approve them, and every sign-off is recorded.</span></button></li>
+<li><button type="button" class="feat-tab" data-i="2"><span class="feat-name">Developmental domains</span><span class="feat-desc">Each finding is tagged to the developmental domain it belongs to.</span></button></li>
+<li><button type="button" class="feat-tab" data-i="3"><span class="feat-name">Parent summary</span><span class="feat-desc">A plain-language version of the casenote that families can read.</span></button></li>
+<li><button type="button" class="feat-tab" data-i="4"><span class="feat-name">Progress over time</span><span class="feat-desc">A child's scores compared across reassessments, with the change called out.</span></button></li>
+<li><button type="button" class="feat-tab" data-i="5"><span class="feat-name">Data you control</span><span class="feat-desc">Delete a case in one step, clear data after export, and run on-site if your centre can't use cloud AI.</span></button></li>
+</ol>
+</div>
+<div class="feat-window">
+<article class="feat-slide is-on" data-i="0" aria-label="Your centre's template">
+<div class="feat-caption"><h3>Your centre's template</h3><p>Drafts follow your centre's own casenote headings, order and wording.</p></div>
+<div class="feat-ui">
+<div class="card ui-card">
+<div class="ui-head"><span class="ui-title">Template</span><span class="tag">Centre casenote v3</span></div>
+<ul class="ui-list">
+<li>Background<span class="check-done"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></li>
+<li>Assessment summary<span class="check-done"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></li>
+<li>Areas of need<span class="check-done"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></li>
+<li>Recommendations<span class="check-done"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></li>
+<li class="is-pending">Next review<span class="check-empty"></span></li>
 </ul>
-<p class="next-ask">Which of these would help your centre most? <a href="mailto:pranavpappu@u.nus.edu?subject=Assessmate%20roadmap">Tell us</a></p>
+<p class="ui-note">Matched to your centre's headings and wording.</p>
+</div>
+</div>
+</article>
+<article class="feat-slide" data-i="1" aria-label="Supervisor sign-off">
+<div class="feat-caption"><h3>Supervisor sign-off</h3><p>Flagged sections go to a queue. Supervisors approve them, and every sign-off is recorded.</p></div>
+<div class="feat-ui">
+<div class="card ui-card">
+<div class="ui-head"><span class="ui-title">Waiting for your sign-off</span><span class="ui-count">1</span></div>
+<div class="ui-queue">
+<div class="ui-q"><div class="ui-q-text"><span class="ui-q-name">Mei Lin T.</span><span class="ui-q-sub">Fine motor skills</span></div><span class="tag" data-k="check">Supervisor check</span></div>
+<div class="ui-q-actions"><span class="ui-btn">Approve</span><span class="ui-btn ui-btn-ghost">Send back</span></div>
+<div class="ui-q"><div class="ui-q-text"><span class="ui-q-name">Ethan K.</span><span class="ui-q-sub">Social interaction</span></div><span class="tag" data-k="done">Approved</span></div>
+<p class="ui-note">Approved by J. Koh, today at 2:14 pm.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="feat-slide" data-i="2" aria-label="Developmental domains">
+<div class="feat-caption"><h3>Developmental domains</h3><p>Each finding is tagged to the developmental domain it belongs to.</p></div>
+<div class="feat-ui">
+<div class="card ui-card">
+<div class="ui-head"><span class="ui-title">Areas of need</span></div>
+<ul class="ui-findings">
+<li><p>Uses two to three word phrases when asking for things.</p><span class="tag">Communication</span></li>
+<li><p>Holds a crayon in a fisted grasp, not yet a tripod grasp.</p><span class="tag">Fine motor</span></li>
+<li><p>Joins circle time but rarely starts play with peers.</p><span class="tag">Social-emotional</span></li>
+</ul>
+</div>
+</div>
+</article>
+<article class="feat-slide" data-i="3" aria-label="Parent summary">
+<div class="feat-caption"><h3>Parent summary</h3><p>A plain-language version of the casenote that families can read.</p></div>
+<div class="feat-ui">
+<div class="ui-pair">
+<div class="card ui-card ui-quiet"><span class="ui-title">Casenote</span><p>Mei Lin scored 8 out of 20 for vocabulary and presents with expressive language delay. Speech and language therapy is recommended.</p></div>
+<svg class="ui-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"></path></svg>
+<div class="card ui-card"><span class="ui-title">For Mei Lin's parents</span><p>Mei Lin is still learning the words she needs to ask for things. Speech therapy will give her more ways to tell you what she wants.</p></div>
+</div>
+</div>
+</article>
+<article class="feat-slide" data-i="4" aria-label="Progress over time">
+<div class="feat-caption"><h3>Progress over time</h3><p>A child's scores compared across reassessments, with the change called out.</p></div>
+<div class="feat-ui">
+<div class="card ui-card">
+<div class="ui-head"><span class="ui-title">Vocabulary, out of 20</span></div>
+<div class="ui-hero"><span class="ui-hero-n">+6</span><span class="ui-hero-l">since March</span></div>
+<div class="ui-chart" role="img" aria-label="Vocabulary scores: March 8, June 11, September 14, out of 20">
+<div class="ui-axis" aria-hidden="true"><span>20</span><span>10</span><span>0</span></div>
+<div class="ui-plot" aria-hidden="true">
+<div class="ui-bar" style="--v:8" title="March: 8 out of 20"><span class="ui-bar-l">Mar</span></div>
+<div class="ui-bar" style="--v:11" title="June: 11 out of 20"><span class="ui-bar-l">Jun</span></div>
+<div class="ui-bar is-latest" style="--v:14" title="September: 14 out of 20"><span class="ui-bar-v">14</span><span class="ui-bar-l">Sep</span></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="feat-slide" data-i="5" aria-label="Data you control">
+<div class="feat-caption"><h3>Data you control</h3><p>Delete a case in one step, clear data after export, and run on-site if your centre can't use cloud AI.</p></div>
+<div class="feat-ui">
+<div class="card ui-card">
+<div class="ui-head"><span class="ui-title">Case data</span></div>
+<div class="ui-setting"><span>Clear case data after export</span><span class="ui-switch is-on"><span class="sr">On</span></span></div>
+<div class="ui-setting"><span>Where the AI runs</span><span class="ui-seg"><span>Cloud</span><span class="is-on">On-site</span></span></div>
+<div class="ui-setting"><span>Remove everything for this case</span><span class="ui-btn ui-btn-danger">Delete case</span></div>
+</div>
+</div>
+</article>
+</div>
 </div>
 </div>
 </section>
