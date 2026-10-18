@@ -103,14 +103,14 @@ main{font-family:'Geist',ui-sans-serif,system-ui,sans-serif;color:var(--ink);bac
 .cite-source-row{margin-top:8px;display:flex;align-items:baseline;justify-content:space-between}
 .cite-label{font-size:13px;color:var(--muted)}
 .cite-score{font-size:22px;font-weight:600;letter-spacing:-0.03em}
-.cite-unit{font-size:13px;color:var(--faint);font-weight:500}
+.cite-unit{font-size:13px;color:var(--subtle);font-weight:500}
 .approve-list{width:100%;max-width:300px;padding:6px}
 .approve-row{display:flex;align-items:center;gap:10px;height:48px;padding:0 12px;font-size:14px;font-weight:500}
 .approve-row+.approve-row{border-top:1px solid var(--hair)}
 .approve-row>:last-child{margin-left:auto}
-.approve-row.is-pending{color:var(--faint)}
+.approve-row.is-pending{color:var(--subtle)}
 .check-done{width:24px;height:24px;border-radius:99px;background:var(--ink);display:inline-flex;align-items:center;justify-content:center}
-.check-empty{width:24px;height:24px;border-radius:99px;box-shadow:inset 0 0 0 1.5px var(--line-strong)}
+.check-empty{width:24px;height:24px;border-radius:99px;box-shadow:inset 0 0 0 1.5px var(--faint)}
 .name-chip{height:48px;padding:0 20px;display:inline-flex;align-items:center;font-size:16px;font-weight:500}
 .anon-chip{height:48px;padding:0 20px;border-radius:16px;background:var(--ink);color:var(--on-ink);display:inline-flex;align-items:center;gap:8px;font-size:16px;font-weight:500}
 .vis-caption{font-size:13px;color:var(--muted)}
