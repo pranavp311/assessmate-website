@@ -218,7 +218,7 @@ section[id]{scroll-margin-top:60px}
 
 /* phones keep About in the nav: tighter gap, and the name drops on the narrowest screens */
 @media (max-width:760px){.site-nav{gap:16px}}
-@media (max-width:400px){.brand-name{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
+@media (max-width:380px){.brand-name{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
 @media (max-width:760px){.hero-lead br{display:none}}
 .pilot-note{margin:-8px 0 0;font-size:15px;color:var(--muted)}
 .pilot-note a{color:var(--ink);text-underline-offset:3px}
