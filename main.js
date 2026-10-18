@@ -17,6 +17,32 @@ if (topbar) {
   update();
 }
 
+// Hero zoom: as the tall hero scrolls past, seek each paused CSS animation to the matching
+// point. Driven from here rather than animation-timeline, which some browsers leave stale
+// when scrolling back up.
+const hero = document.querySelector('.hero');
+if (hero) {
+  const live = window.matchMedia('(min-width: 1000px) and (prefers-reduced-motion: no-preference)');
+  // Each animation's share of the scroll run, as [start, end] fractions.
+  const ranges = { text: [0, 0.25], win: [0, 1], dim: [0.35, 0.7], cap: [0.5, 0.7] };
+  const clamp = (v) => Math.min(Math.max(v, 0), 0.9999);
+  let pending = false;
+  const frame = () => {
+    pending = false;
+    if (!live.matches) return;
+    const run = hero.offsetHeight - window.innerHeight;
+    const p = run > 0 ? clamp(-hero.getBoundingClientRect().top / run) : 0;
+    for (const [k, [a, b]] of Object.entries(ranges)) {
+      hero.style.setProperty('--p-' + k, clamp((p - a) / (b - a)).toFixed(4));
+    }
+  };
+  const queue = () => { if (!pending) { pending = true; requestAnimationFrame(frame); } };
+  window.addEventListener('scroll', queue, { passive: true });
+  window.addEventListener('resize', queue);
+  live.addEventListener('change', queue);
+  frame();
+}
+
 // Demo chat in the hero panel. Static content; nothing is sent anywhere.
 const chat = document.querySelector('.chat');
 const chipsEl = document.querySelector('.chips');
