@@ -40,7 +40,7 @@ section[id]{scroll-margin-top:60px}
 .cta-sm{height:38px;padding:0 16px;font-size:14px}
 
 /* hero + scroll zoom */
-.hero{position:relative;height:2000px;view-timeline-name:--hero;view-timeline-axis:block}
+.hero{position:relative;height:1600px;view-timeline-name:--hero;view-timeline-axis:block}
 .stage{position:sticky;top:12px;margin:12px;height:min(900px,calc(100vh - 24px));border-radius:var(--r-xl);overflow:hidden;background:var(--sky) url(assets/hills.jpg) center 78%/cover no-repeat}
 .hero-text{position:relative;z-index:1;text-align:center;padding:0 24px}
 .win{position:absolute;z-index:2;left:0;right:0;top:540px;margin:0 auto;width:min(1200px,calc(100% - 48px));aspect-ratio:1470/801;border-radius:var(--r-lg);background:var(--surface);box-shadow:var(--shadow-window);transform-origin:100% 0}
