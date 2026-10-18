@@ -124,3 +124,10 @@ a{color:#0A0A0B}a:hover{color:#55575E}
 @media (min-width:1000px) and (prefers-reduced-motion:reduce){.hero{height:auto}.stage{position:relative;top:0;height:auto;padding-bottom:120px}.win{position:relative;top:auto;margin-top:56px}.zoom-cap{display:none}}
 .composer:focus-within{box-shadow:0 0 0 2px #0A0A0B}
 .composer input::placeholder{color:#6A6D74}
+
+/* phones: full-bleed sections instead of stacked rounded panels; tiles size to content */
+@media (max-width:760px){
+.stage,.world{margin:0;border-radius:0}
+.tile{min-height:0;padding:28px;gap:28px}
+.tile h3{font-size:26px}
+}
