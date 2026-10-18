@@ -154,7 +154,7 @@ section[id]{scroll-margin-top:60px}
 
 /* glass world */
 /* clip-path as well as overflow: Safari lets the blurred hills leak past a rounded overflow:hidden corner */
-.world{position:relative;margin:12px;border-radius:var(--stage-r);overflow:hidden;clip-path:inset(0 round var(--stage-r));isolation:isolate;padding-bottom:140px}
+.world{position:relative;margin:12px;border-radius:var(--stage-r);overflow:hidden;overflow:clip;clip-path:inset(0 round var(--stage-r));isolation:isolate;padding-bottom:140px}
 .world-bg{position:absolute;inset:-120px;background:var(--sky-mist) url(assets/hills.jpg) center/cover no-repeat;filter:blur(70px) saturate(1.2);z-index:-2}
 .world::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.28) 45%,rgba(255,255,255,.5) 100%);z-index:-1}
 .glass{background:var(--glass);backdrop-filter:var(--blur-glass);-webkit-backdrop-filter:var(--blur-glass);border:1px solid var(--glass-edge);box-shadow:var(--shadow-glass)}
