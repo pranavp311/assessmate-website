@@ -133,7 +133,9 @@ section[id]{scroll-margin-top:60px}
 
 /* editors */
 .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
-.tile.editor{min-height:300px;align-items:center;justify-content:center;text-align:center;gap:16px}
+.tile.editor{min-height:0;flex-direction:row;align-items:center;gap:24px;padding:28px 32px}
+.tile.editor img{width:auto;height:56px;flex:none}
+.editor-text{display:flex;flex-direction:column;gap:4px}
 .editor-note{font-size:15px;color:var(--muted)}
 
 /* pilot + footer */
