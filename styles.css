@@ -329,6 +329,8 @@ section[id]{scroll-margin-top:60px}
 .qa summary::-webkit-details-marker{display:none}
 .qa summary::after{content:"";width:10px;height:10px;flex:none;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:translateY(-3px) rotate(45deg);transition:transform .2s}
 .qa[open] summary::after{transform:translateY(2px) rotate(225deg)}
+.qa.is-closing summary::after{transform:translateY(-3px) rotate(45deg)}
+.qa-body{overflow:hidden}
 .qa p{margin:0;padding:0 0 22px;font-size:17px;line-height:1.6;color:var(--ink-2);max-width:640px}
 @media (prefers-reduced-motion:reduce){.qa summary::after{transition:none}}
 .footer-links{display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px}
