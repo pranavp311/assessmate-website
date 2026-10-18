@@ -24,17 +24,56 @@ const hero = document.querySelector('.hero');
 if (hero) {
   const live = window.matchMedia('(min-width: 1000px) and (prefers-reduced-motion: no-preference)');
   // Each animation's share of the scroll run, as [start, end] fractions.
-  const ranges = { text: [0, 0.25], win: [0, 1], dim: [0.35, 0.7], cap: [0.5, 0.7] };
+  const ranges = { text: [0, 0.25], dim: [0.35, 0.7], cap: [0.5, 0.7] };
   const clamp = (v) => Math.min(Math.max(v, 0), 0.9999);
   let pending = false;
+  const stage = hero.querySelector('.stage');
+  const win = hero.querySelector('.win');
+  const panel = hero.querySelector('.panel');
+  // The window slides up to fill the stage, then zooms into the chat panel. The zoom is sized so
+  // the whole panel fits between the top bar and the bottom of the stage on any screen.
+  // At the end of the zoom the dimmed window is trimmed to a card that frames the caption and the
+  // chat panel, centred with landscape around it. The panel overhangs the card's right edge.
+  const cap = hero.querySelector('.zoom-cap');
+  const zoomEnd = () => {
+    const top = 64, bottom = 20, pad = 56, sw = stage.clientWidth, sh = stage.clientHeight;
+    const w = win.offsetWidth, h = win.offsetHeight, ph = panel.offsetHeight;
+    const s = Math.min(1.3, (sh - top - bottom - 2 * pad) / ph);
+    const panelTop = top + (sh - top - bottom - ph * s) / 2;
+    const winTop = panelTop - panel.offsetTop * s;
+    const overhang = (panel.offsetLeft + panel.offsetWidth - w) * s;
+    // Wide enough to leave the caption its own space beside the panel, but no wider than the screen.
+    const need = (w - panel.offsetLeft) * s + cap.offsetWidth + 2 * pad;
+    const cardW = Math.min(w * s, sw - 48 - overhang, Math.max(sw * 0.7, need));
+    const cardLeft = (sw - cardW - overhang) / 2;
+    const winLeft = cardLeft - (w * s - cardW);
+    const panelLeft = winLeft + panel.offsetLeft * s;
+    return {
+      s,
+      capLeft: Math.max(24, (cardLeft + panelLeft - cap.offsetWidth) / 2),
+      x: winLeft - win.offsetLeft - w + w * s,
+      y1: 70 - win.offsetTop,
+      y2: winTop - win.offsetTop,
+      clip: [(panelTop - pad - winTop) / s, Math.max(0, (winTop + h * s - (panelTop + ph * s + pad)) / s), (w * s - cardW) / s],
+    };
+  };
+  const mix = (a, b, t) => a + (b - a) * t;
   const frame = () => {
     pending = false;
-    if (!live.matches) return;
+    if (!live.matches) { win.style.transform = ''; win.style.removeProperty('--clip'); cap.style.left = ''; return; }
     const run = hero.offsetHeight - window.innerHeight;
     const p = run > 0 ? clamp(-hero.getBoundingClientRect().top / run) : 0;
     for (const [k, [a, b]] of Object.entries(ranges)) {
       hero.style.setProperty('--p-' + k, clamp((p - a) / (b - a)).toFixed(4));
     }
+    const e = zoomEnd();
+    cap.style.left = e.capLeft + 'px';
+    const t1 = Math.min(p / 0.35, 1), t2 = clamp((p - 0.35) / 0.45);
+    const y = t2 > 0 ? mix(e.y1, e.y2, t2) : e.y1 * t1;
+    win.style.transform = `translate(${mix(0, e.x, t2)}px, ${y}px) scale(${mix(1, e.s, t2)})`;
+    const [ct, cb, cl] = e.clip.map((v) => mix(0, v, t2) + 'px');
+    win.style.setProperty('--clip', `${ct} 0 ${cb} ${cl}`);
+    win.classList.toggle('is-card', t2 > 0);
   };
   const queue = () => { if (!pending) { pending = true; requestAnimationFrame(frame); } };
   window.addEventListener('scroll', queue, { passive: true });
@@ -49,8 +88,6 @@ const chipsEl = document.querySelector('.chips');
 const input = document.querySelector('.composer input');
 const sendBtn = document.querySelector('.composer .send');
 
-const SHEET_ICON = '<span class="src src-sheet" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><path d="M4 10h16M4 15h16M10 4v16"></path></svg></span>';
-const NOTE_ICON = '<span class="src src-note" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 4h9l4 4v12H6z"></path><path d="M9 12h7M9 16h5"></path></svg></span>';
 const PLUS = 'M12 5v14M5 12h14';
 const CHECK = 'M5 12.5l4.5 4.5L19 7.5';
 
@@ -78,11 +115,8 @@ function push(node) {
   return wrap;
 }
 
-function userMsg(text, files) {
+function userMsg(text) {
   const box = el('<div class="u-wrap"></div>');
-  if (files) {
-    box.appendChild(el(`<div class="files"><span class="file">${SHEET_ICON}Assessment sheet</span><span class="file">${NOTE_ICON}Observation notes</span></div>`));
-  }
   const bubble = el('<div class="u-bubble"></div>');
   bubble.textContent = text;
   box.appendChild(bubble);
@@ -104,15 +138,22 @@ function textMsg(text, flag, link) {
   push(row);
 }
 
+// Turns an "add" button into its done state: a tick and a new label.
+function markDone(btn, label) {
+  btn.dataset.done = 'true';
+  btn.disabled = true;
+  btn.querySelector('path').setAttribute('d', CHECK);
+  btn.querySelector('span').textContent = label;
+}
+
 function draftMsg() {
   const node = el(`
     <div class="a-draft">
-      <div class="a-text">Here's a draft from her scores and your notes.</div>
       <div class="draft">
-        <p class="draft-p"><strong>Expressive language.</strong> Mei Lin scored 8 out of 20 for vocabulary <span class="num">1</span> and uses two to three word phrases when asking for things <span class="num">2</span>. Speech and language therapy is recommended.</p>
+        <p class="draft-p"><strong>Expressive language.</strong> Mei Lin scored 8 out of 20 for vocabulary<span class="num">1</span> and uses two to three word phrases when asking for things<span class="num">2</span>. Speech and language therapy is recommended.</p>
         <div class="srcs">
-          <div class="srcrow"><span class="num">1</span>${SHEET_ICON}Assessment sheet<b>Vocabulary 8/20</b></div>
-          <div class="srcrow"><span class="num">2</span>${NOTE_ICON}Your notes<b>Session 2</b></div>
+          <div class="srcrow"><span class="num">1</span>Assessment sheet<b>Vocabulary 8/20</b></div>
+          <div class="srcrow"><span class="num">2</span>Your notes<b>Session 2</b></div>
         </div>
         <button class="add" type="button" data-done="false"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${PLUS}"></path></svg><span>Add to casenote</span></button>
       </div>
@@ -121,10 +162,7 @@ function draftMsg() {
   btn.addEventListener('click', () => {
     if (added) return;
     added = true;
-    btn.dataset.done = 'true';
-    btn.disabled = true;
-    btn.querySelector('path').setAttribute('d', CHECK);
-    btn.querySelector('span').textContent = 'Added to your casenote';
+    markDone(btn, 'Added to your casenote');
   });
   push(node);
 }
@@ -166,7 +204,12 @@ function send() {
 sendBtn.addEventListener('click', send);
 input.addEventListener('keydown', (e) => { if (e.key === 'Enter') send(); });
 
-userMsg('Draft the areas of need for Mei Lin.', true);
+// The re-approval demo in the feature showcase.
+document.querySelectorAll('.mini button.add').forEach((btn) => {
+  btn.addEventListener('click', () => markDone(btn, 'Approved'), { once: true });
+});
+
+userMsg('Draft the areas of need for Mei Lin.');
 draftMsg();
 renderChips();
 
@@ -204,13 +247,27 @@ if (showcase) {
   const update = () => {
     queued = false;
     if (!wide.matches) return;
-    setActive(Math.floor(progress() * slides.length));
+    // Off screen, no slide is active, so each one's animation plays when the reader arrives.
+    const r = showcase.getBoundingClientRect();
+    if (r.top > window.innerHeight * 0.5 || r.bottom < 0) {
+      current = -1;
+      slides.forEach((s) => s.classList.remove('is-on'));
+      return;
+    }
+    const f = progress() * slides.length;
+    setActive(Math.floor(f));
+    showcase.style.setProperty('--p', (f % 1).toFixed(3));
   };
 
-  // On phones every slide is shown in turn, so none is hidden.
+  // On phones every slide is shown in turn; each plays its animation as it scrolls into view.
+  const seen = new IntersectionObserver((entries) => entries.forEach((e) => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('is-on');
+    seen.unobserve(e.target);
+  }), { threshold: 0.35 });
   const reset = () => {
     if (wide.matches) { current = -1; update(); return; }
-    slides.forEach((s) => { s.classList.add('is-on'); s.inert = false; });
+    slides.forEach((s) => { s.classList.remove('is-on'); s.inert = false; seen.observe(s); });
   };
 
   window.addEventListener('scroll', () => {

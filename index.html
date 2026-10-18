@@ -6,10 +6,10 @@
 <title>Assessmate · Casenotes, backed by evidence</title>
 <meta name="description" content="An AI helper that drafts early-intervention casenotes from your assessments, right inside Word and Google Docs. Built for Singapore's PDPA.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://assessmate-website.vercel.app/">
+<meta property="og:url" content="https://assessmate.tech/">
 <meta property="og:title" content="Assessmate · Casenotes, backed by evidence">
 <meta property="og:description" content="An AI helper for early-intervention assessors. It drafts casenotes from your assessments, right inside Word and Google Docs.">
-<meta property="og:image" content="https://assessmate-website.vercel.app/assets/og.jpg">
+<meta property="og:image" content="https://assessmate.tech/assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Casenotes, backed by evidence. The Assessmate homepage.">
@@ -66,7 +66,6 @@
 <div class="chips"></div>
 
 <div class="composer">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="icon-faint" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5l-8.6 8.6a5.5 5.5 0 01-7.8-7.8l8.6-8.6a3.7 3.7 0 015.2 5.2l-8.6 8.6a1.8 1.8 0 01-2.6-2.6l7.9-7.9"></path></svg>
 <input type="text" aria-label="Ask Assessmate" placeholder="Ask about Mei Lin's assessment…">
 <button class="send" type="button" aria-label="Send"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></button>
 </div>
@@ -107,34 +106,21 @@
 <div class="tile">
 <h3>See where it came from.</h3>
 <div class="vis">
-<div class="cite-demo">
-<div class="card cite-sentence">Mei Lin scored <span class="hl">8 out of 20</span> for vocabulary.</div>
-<div class="card cite-source">
-<div class="cite-source-head"><span class="src src-sheet" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><path d="M4 10h16M4 15h16M10 4v16"></path></svg></span>Assessment sheet</div>
-<div class="cite-source-row"><span class="cite-label">Vocabulary</span><span class="cite-score">8<span class="cite-unit"> / 20</span></span></div>
-</div>
-</div>
+<div class="draft tile-draft" aria-hidden="true"><p class="draft-p">Mei Lin scored 8 out of 20 for vocabulary<span class="num">1</span>.</p><div class="srcs"><div class="srcrow"><span class="num">1</span>Assessment sheet<b>Vocabulary 8/20</b></div></div></div>
 </div>
 </div>
 
 <div class="tile">
 <h3>You approve every line.</h3>
 <div class="vis">
-<div class="card approve-list">
-<div class="approve-row">Expressive language<span class="check-done"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></div>
-<div class="approve-row">Fine motor skills<span class="tag" data-k="check">Supervisor check</span></div>
-<div class="approve-row is-pending">Social interaction<span class="check-empty"></span></div>
-</div>
+<div class="tile-stack" aria-hidden="true"><div class="draft"><p class="draft-p"><strong>Speech and language therapy</strong> is recommended.</p><span class="add" data-done="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Added to your casenote</span></span></div><div class="a-row"><span class="flag">!</span><div class="a-text">Occupational therapy needs your supervisor to sign off.</div></div></div>
 </div>
 </div>
 
 <div class="tile">
 <h3>Names stay private.</h3>
-<div class="vis vis-stack">
-<div class="card name-chip">Mei Lin Tan</div>
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="icon-faint" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"></path></svg>
-<div class="anon-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 018 0v3"></path></svg>Child A</div>
-<div class="vis-caption">What the AI sees</div>
+<div class="vis">
+<div class="mini tile-mini" aria-hidden="true"><div class="panel-head"><img src="assets/logo/mark.svg" alt="" width="20" height="20"><span class="panel-name">Assessmate</span><span class="badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 018 0v3"></path></svg>Name hidden from AI</span></div><div class="mini-chat"><div class="u-wrap"><div class="files"><span class="file"><span class="src src-sheet" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><path d="M4 10h16M4 15h16M10 4v16"></path></svg></span>Assessment sheet</span><span class="file"><span class="src src-note" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 4h9l4 4v12H6z"></path><path d="M9 12h7M9 16h5"></path></svg></span>Observation notes</span></div><div class="u-bubble">Draft the areas of need for Mei Lin.</div></div><div class="vis-caption">The AI only sees “Child A”.</div></div></div>
 </div>
 </div>
 
@@ -172,95 +158,69 @@
 <div class="showcase-stage">
 <div class="wrap showcase-grid">
 <div class="showcase-copy">
-<h2 id="features-title" class="showcase-title">Everything around<br>the casenote.</h2>
+<h2 id="features-title" class="showcase-title">Ready to sign, <br>not just written.</h2>
 <ol class="feat-list">
-<li><button type="button" class="feat-tab" data-i="0" aria-current="true"><span class="feat-name">Your centre's template</span><span class="feat-desc">Drafts follow your centre's own casenote headings, order and wording.</span></button></li>
-<li><button type="button" class="feat-tab" data-i="1"><span class="feat-name">Supervisor sign-off</span><span class="feat-desc">Flagged sections go to a queue. Supervisors approve them, and every sign-off is recorded.</span></button></li>
-<li><button type="button" class="feat-tab" data-i="2"><span class="feat-name">Developmental domains</span><span class="feat-desc">Each finding is tagged to the developmental domain it belongs to.</span></button></li>
-<li><button type="button" class="feat-tab" data-i="3"><span class="feat-name">Parent summary</span><span class="feat-desc">A plain-language version of the casenote that families can read.</span></button></li>
-<li><button type="button" class="feat-tab" data-i="4"><span class="feat-name">Progress over time</span><span class="feat-desc">A child's scores compared across reassessments, with the change called out.</span></button></li>
-<li><button type="button" class="feat-tab" data-i="5"><span class="feat-name">Data you control</span><span class="feat-desc">Delete a case in one step, clear data after export, and run on-site if your centre can't use cloud AI.</span></button></li>
+<li><button type="button" class="feat-tab" data-i="0" aria-current="true"><span class="feat-num">01</span><span class="feat-name">In your centre's template</span><span class="feat-desc">Drafts land in your own Word template, with its headings, tables and signature block intact.</span></button></li>
+<li><button type="button" class="feat-tab" data-i="1"><span class="feat-num">02</span><span class="feat-name">Honest about gaps</span><span class="feat-desc">If your notes can't support a finding, Assessmate says so instead of guessing.</span></button></li>
+<li><button type="button" class="feat-tab" data-i="2"><span class="feat-num">03</span><span class="feat-name">The right sign-off</span><span class="feat-desc">Recommendations your centre flags go to your supervisor. The rest go straight into the casenote.</span></button></li>
+<li><button type="button" class="feat-tab" data-i="3"><span class="feat-num">04</span><span class="feat-name">Nothing changes quietly</span><span class="feat-desc">Every approval is kept. If a source file changes, the sections built on it reopen for review.</span></button></li>
 </ol>
 </div>
 <div class="feat-window">
-<article class="feat-slide is-on" data-i="0" aria-label="Your centre's template">
-<div class="feat-caption"><h3>Your centre's template</h3><p>Drafts follow your centre's own casenote headings, order and wording.</p></div>
+<article class="feat-slide is-on" data-i="0" aria-label="In your centre's template">
+<div class="feat-caption"><span class="feat-num">01</span><h3>In your centre's template</h3><p>Drafts land in your own Word template, with its headings, tables and signature block intact.</p></div>
 <div class="feat-ui">
-<div class="card ui-card">
-<div class="ui-head"><span class="ui-title">Template</span><span class="tag">Centre casenote v3</span></div>
-<ul class="ui-list">
-<li>Background<span class="check-done"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></li>
-<li>Assessment summary<span class="check-done"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></li>
-<li>Areas of need<span class="check-done"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></li>
-<li>Recommendations<span class="check-done"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></li>
-<li class="is-pending">Next review<span class="check-empty"></span></li>
-</ul>
-<p class="ui-note">Matched to your centre's headings and wording.</p>
+<div class="fx-shot">
+<div class="fx-desk">
+<img src="assets/word-casenote.png" alt="A casenote open in Microsoft Word, with the centre's letterhead, score tables, areas of need and a sign-off block for the assessor and supervisor." width="1450" height="1312" loading="lazy">
+<span class="fx-mark" aria-hidden="true"></span>
+<div class="mini fx-dock" aria-hidden="true">
+<div class="panel-head"><img src="assets/logo/mark.svg" alt="" width="20" height="20"><span class="panel-name">Assessmate</span><span class="badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 018 0v3"></path></svg>Name hidden</span></div>
+<div class="mini-chat">
+<div class="draft"><p class="draft-p"><strong>Expressive language.</strong> Mei Lin scored 8 out of 20 for vocabulary<span class="num">1</span> and uses two to three word phrases when asking for things<span class="num">2</span>.</p><div class="srcs"><div class="srcrow"><span class="num">1</span>Assessment sheet</div><div class="srcrow"><span class="num">2</span>Your notes</div></div><span class="add" data-done="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Added to your casenote</span></span></div>
 </div>
-</div>
-</article>
-<article class="feat-slide" data-i="1" aria-label="Supervisor sign-off">
-<div class="feat-caption"><h3>Supervisor sign-off</h3><p>Flagged sections go to a queue. Supervisors approve them, and every sign-off is recorded.</p></div>
-<div class="feat-ui">
-<div class="card ui-card">
-<div class="ui-head"><span class="ui-title">Waiting for your sign-off</span><span class="ui-count">1</span></div>
-<div class="ui-queue">
-<div class="ui-q"><div class="ui-q-text"><span class="ui-q-name">Mei Lin T.</span><span class="ui-q-sub">Fine motor skills</span></div><span class="tag" data-k="check">Supervisor check</span></div>
-<div class="ui-q-actions"><span class="ui-btn">Approve</span><span class="ui-btn ui-btn-ghost">Send back</span></div>
-<div class="ui-q"><div class="ui-q-text"><span class="ui-q-name">Ethan K.</span><span class="ui-q-sub">Social interaction</span></div><span class="tag" data-k="done">Approved</span></div>
-<p class="ui-note">Approved by J. Koh, today at 2:14 pm.</p>
-</div>
-</div>
-</div>
-</article>
-<article class="feat-slide" data-i="2" aria-label="Developmental domains">
-<div class="feat-caption"><h3>Developmental domains</h3><p>Each finding is tagged to the developmental domain it belongs to.</p></div>
-<div class="feat-ui">
-<div class="card ui-card">
-<div class="ui-head"><span class="ui-title">Areas of need</span></div>
-<ul class="ui-findings">
-<li><p>Uses two to three word phrases when asking for things.</p><span class="tag">Communication</span></li>
-<li><p>Holds a crayon in a fisted grasp, not yet a tripod grasp.</p><span class="tag">Fine motor</span></li>
-<li><p>Joins circle time but rarely starts play with peers.</p><span class="tag">Social-emotional</span></li>
-</ul>
-</div>
-</div>
-</article>
-<article class="feat-slide" data-i="3" aria-label="Parent summary">
-<div class="feat-caption"><h3>Parent summary</h3><p>A plain-language version of the casenote that families can read.</p></div>
-<div class="feat-ui">
-<div class="ui-pair">
-<div class="card ui-card ui-quiet"><span class="ui-title">Casenote</span><p>Mei Lin scored 8 out of 20 for vocabulary and presents with expressive language delay. Speech and language therapy is recommended.</p></div>
-<svg class="ui-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"></path></svg>
-<div class="card ui-card"><span class="ui-title">For Mei Lin's parents</span><p>Mei Lin is still learning the words she needs to ask for things. Speech therapy will give her more ways to tell you what she wants.</p></div>
-</div>
-</div>
-</article>
-<article class="feat-slide" data-i="4" aria-label="Progress over time">
-<div class="feat-caption"><h3>Progress over time</h3><p>A child's scores compared across reassessments, with the change called out.</p></div>
-<div class="feat-ui">
-<div class="card ui-card">
-<div class="ui-head"><span class="ui-title">Vocabulary, out of 20</span></div>
-<div class="ui-hero"><span class="ui-hero-n">+6</span><span class="ui-hero-l">since March</span></div>
-<div class="ui-chart" role="img" aria-label="Vocabulary scores: March 8, June 11, September 14, out of 20">
-<div class="ui-axis" aria-hidden="true"><span>20</span><span>10</span><span>0</span></div>
-<div class="ui-plot" aria-hidden="true">
-<div class="ui-bar" style="--v:8" title="March: 8 out of 20"><span class="ui-bar-l">Mar</span></div>
-<div class="ui-bar" style="--v:11" title="June: 11 out of 20"><span class="ui-bar-l">Jun</span></div>
-<div class="ui-bar is-latest" style="--v:14" title="September: 14 out of 20"><span class="ui-bar-v">14</span><span class="ui-bar-l">Sep</span></div>
 </div>
 </div>
 </div>
 </div>
 </article>
-<article class="feat-slide" data-i="5" aria-label="Data you control">
-<div class="feat-caption"><h3>Data you control</h3><p>Delete a case in one step, clear data after export, and run on-site if your centre can't use cloud AI.</p></div>
+<article class="feat-slide" data-i="1" aria-label="Honest about gaps">
+<div class="feat-caption"><span class="feat-num">02</span><h3>Honest about gaps</h3><p>If your notes can't support a finding, Assessmate says so instead of guessing.</p></div>
 <div class="feat-ui">
-<div class="card ui-card">
-<div class="ui-head"><span class="ui-title">Case data</span></div>
-<div class="ui-setting"><span>Clear case data after export</span><span class="ui-switch is-on"><span class="sr">On</span></span></div>
-<div class="ui-setting"><span>Where the AI runs</span><span class="ui-seg"><span>Cloud</span><span class="is-on">On-site</span></span></div>
-<div class="ui-setting"><span>Remove everything for this case</span><span class="ui-btn ui-btn-danger">Delete case</span></div>
+<div class="mini" aria-hidden="true">
+<div class="panel-head"><img src="assets/logo/mark.svg" alt="" width="20" height="20"><span class="panel-name">Assessmate</span><span class="badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 018 0v3"></path></svg>Name hidden from AI</span></div>
+<div class="mini-chat">
+<div class="u-wrap fx-in" style="--d:1"><div class="u-bubble">What's missing?</div></div>
+<div class="a-row fx-in" style="--d:4"><span class="flag">!</span><div class="a-text">There isn't enough on social interaction yet. Only one session mentions it. Add another observation and I'll draft that part too.</div></div>
+</div>
+<div class="composer"><span>Ask about Mei Lin's assessment…</span><span class="send"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></span></div>
+</div>
+</div>
+</article>
+<article class="feat-slide" data-i="2" aria-label="The right sign-off">
+<div class="feat-caption"><span class="feat-num">03</span><h3>The right sign-off</h3><p>Recommendations your centre flags go to your supervisor. The rest go straight into the casenote.</p></div>
+<div class="feat-ui">
+<div class="mini" aria-hidden="true">
+<div class="panel-head"><img src="assets/logo/mark.svg" alt="" width="20" height="20"><span class="panel-name">Assessmate</span><span class="badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 018 0v3"></path></svg>Name hidden from AI</span></div>
+<div class="mini-chat">
+<div class="draft fx-in" style="--d:1"><p class="draft-p"><strong>Expressive language.</strong> Speech and language therapy is recommended.</p><span class="add" data-done="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Added to your casenote</span></span></div>
+<div class="u-wrap fx-in" style="--d:3"><div class="u-bubble">Check fine motor skills</div></div>
+<div class="a-row fx-in" style="--d:6"><span class="flag">!</span><div class="a-text">Poor fine motor skills: 1 out of 5 with quadrupod grasp. Occupational therapy needs your supervisor to sign off, so I have flagged it for them.</div></div>
+</div>
+<div class="composer"><span>Ask about Mei Lin's assessment…</span><span class="send"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></span></div>
+</div>
+</div>
+</article>
+<article class="feat-slide" data-i="3" aria-label="Nothing changes quietly">
+<div class="feat-caption"><span class="feat-num">04</span><h3>Nothing changes quietly</h3><p>Every approval is kept. If a source file changes, the sections built on it reopen for review.</p></div>
+<div class="feat-ui">
+<div class="mini">
+<div class="panel-head"><img src="assets/logo/mark.svg" alt="" width="20" height="20"><span class="panel-name">Assessmate</span><span class="badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 018 0v3"></path></svg>Name hidden from AI</span></div>
+<div class="mini-chat">
+<div class="a-row fx-in" style="--d:1"><span class="flag">!</span><div class="a-text">The assessment sheet changed after you approved this draft. Vocabulary is now 10 out of 20, so I have reopened Expressive language for you to review.</div></div>
+<div class="draft fx-in" style="--d:4"><p class="draft-p"><strong>Expressive language.</strong> Mei Lin scored <span class="fx-changed">10 out of 20</span> for vocabulary<span class="num">1</span> and uses two to three word phrases when asking for things<span class="num">2</span>.</p><button class="add" type="button"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg><span>Approve again</span></button></div>
+</div>
+<div class="composer"><span>Ask about Mei Lin's assessment…</span><span class="send"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></span></div>
 </div>
 </div>
 </article>
@@ -303,10 +263,10 @@
 <!-- FAQ -->
 <section id="faq" class="faq">
 <div class="wrap faq-inner">
-<h2 class="section-title">Questions.</h2>
+<h2 class="section-title">Questions?</h2>
 <details class="qa"><summary>Does Assessmate write the casenote for me?</summary><div class="qa-body"><p>It writes a draft. You read every line, change what you need, and only what you approve goes into the casenote.</p></div></details>
 <details class="qa"><summary>How do I know a sentence is right?</summary><div class="qa-body"><p>Every sentence links to the score or session note it came from, so you can check it at a glance. Anything that needs clinical sign-off is flagged for your supervisor.</p></div></details>
-<details class="qa"><summary>What does the AI see?</summary><div class="qa-body"><p>Names and IDs are removed before the AI sees anything. It works with “Child A”, not the child's name.</p></div></details>
+<details class="qa"><summary>What does the AI see?</summary><div class="qa-body"><p>Names and IDs are removed before the AI sees anything. It works with “Child A”, not the child's name. Built around <a href="https://www.pdpc.gov.sg/overview-of-pdpa/the-legislation/personal-data-protection-act" target="_blank" rel="noopener">Singapore's PDPA guidelines&nbsp;<span aria-hidden="true">↗</span></a>.</p></div></details>
 <details class="qa"><summary>Is our case data used to train AI models?</summary><div class="qa-body"><p>No. Your case data is never used to train AI models.</p></div></details>
 <details class="qa"><summary>Can we use it on real records?</summary><div class="qa-body"><p>Only after your Data Protection Officer signs off. Until then, try it on sample cases.</p></div></details>
 <details class="qa"><summary>Which editors does it work in?</summary><div class="qa-body"><p>Microsoft Word, on your computer or online, and Google Docs in your browser.</p></div></details>
