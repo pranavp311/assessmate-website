@@ -190,6 +190,15 @@ if (showcase) {
   window.addEventListener('scroll', () => {
     if (!queued) { queued = true; requestAnimationFrame(update); }
   }, { passive: true });
+  // Clicking a feature scrolls to the middle of its stretch of the section.
+  const still = window.matchMedia('(prefers-reduced-motion: reduce)');
+  tabs.forEach((t, k) => t.addEventListener('click', () => {
+    if (!wide.matches) return;
+    const run = showcase.offsetHeight - stage.offsetHeight;
+    const top = showcase.getBoundingClientRect().top + window.scrollY + run * (k + 0.5) / slides.length;
+    window.scrollTo({ top, behavior: still.matches ? 'auto' : 'smooth' });
+  }));
+
   wide.addEventListener('change', reset);
   reset();
 }
